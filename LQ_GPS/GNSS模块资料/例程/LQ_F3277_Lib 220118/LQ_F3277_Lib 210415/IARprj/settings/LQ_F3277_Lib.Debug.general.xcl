@@ -1,0 +1,15 @@
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\bin\armjlink2.dll" 
+
+"C:\Users\Administrator\Desktop\jia_han\LQ_GPS\GNSS模块资料\例程\LQ_F3277_Lib 220118\LQ_F3277_Lib 210415\IARprj\Debug\Exe\MM32.out" 
+
+--plugin="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\bin\armbat.dll" 
+
+--device_macro="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\config\debugger\MindMotion\MM32F3270.dmac" 
+
+--flash_loader="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\config\flashloader\MindMotion\FlashMM32F327xGx.board" 
+
+
+
+

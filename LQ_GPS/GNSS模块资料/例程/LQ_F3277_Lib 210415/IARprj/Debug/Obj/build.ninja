@@ -1,0 +1,94 @@
+#Generating source browse information for project LQ_F3277_Lib
+
+
+#Abbreviations
+cc = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\SourceIndexer.exe
+ll = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\PbdLink.exe
+bd = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\makeBrowseData.exe
+
+
+
+#Rules
+rule index
+  depfile = $out.dep
+  command = $cc -out=$out -f $in
+rule link
+  command = $ll -M $out $in
+rule browsedata
+  command = $bd $in -output  $out
+
+
+
+#Build steps
+build Algorithm.pbi : index Algorithm.xcl
+build LQ_GPS_BD.pbi : index LQ_GPS_BD.xcl
+build LQ_ICM20689.pbi : index LQ_ICM20689.xcl
+build LQ_demo_DMP.pbi : index LQ_demo_DMP.xcl
+build LQ_I2C_MPU6050.pbi : index LQ_I2C_MPU6050.xcl
+build LQ_I2C_MPU9250.pbi : index LQ_I2C_MPU9250.xcl
+build LQ_AnoScope.pbi : index LQ_AnoScope.xcl
+build LQ_CAMERA.pbi : index LQ_CAMERA.xcl
+build LQ_GPIO_EXIT.pbi : index LQ_GPIO_EXIT.xcl
+build LQ_GPIO_KEY.pbi : index LQ_GPIO_KEY.xcl
+build LQ_GPIO_LED.pbi : index LQ_GPIO_LED.xcl
+build LQ_ImageProcess.pbi : index LQ_ImageProcess.xcl
+build LQ_Inductor.pbi : index LQ_Inductor.xcl
+build LQ_MotorServo.pbi : index LQ_MotorServo.xcl
+build LQ_MT9V034.pbi : index LQ_MT9V034.xcl
+build LQ_OLED096.pbi : index LQ_OLED096.xcl
+build LQ_PID.pbi : index LQ_PID.xcl
+build LQ_TFT18.pbi : index LQ_TFT18.xcl
+build LQ_ADC.pbi : index LQ_ADC.xcl
+build LQ_DMA.pbi : index LQ_DMA.xcl
+build LQ_Encoder.pbi : index LQ_Encoder.xcl
+build LQ_FLASH.pbi : index LQ_FLASH.xcl
+build LQ_GPIO.pbi : index LQ_GPIO.xcl
+build LQ_I2C.pbi : index LQ_I2C.xcl
+build LQ_PWM.pbi : index LQ_PWM.xcl
+build LQ_SOFTI2C.pbi : index LQ_SOFTI2C.xcl
+build LQ_SOFTSPI.pbi : index LQ_SOFTSPI.xcl
+build LQ_SPI.pbi : index LQ_SPI.xcl
+build LQ_SYS.pbi : index LQ_SYS.xcl
+build LQ_TIMER.pbi : index LQ_TIMER.xcl
+build LQ_UART.pbi : index LQ_UART.xcl
+build hal_adc.pbi : index hal_adc.xcl
+build hal_bkp.pbi : index hal_bkp.xcl
+build hal_can.pbi : index hal_can.xcl
+build hal_comp.pbi : index hal_comp.xcl
+build hal_crc.pbi : index hal_crc.xcl
+build hal_crs.pbi : index hal_crs.xcl
+build hal_dac.pbi : index hal_dac.xcl
+build hal_dbg.pbi : index hal_dbg.xcl
+build hal_dma.pbi : index hal_dma.xcl
+build hal_eth.pbi : index hal_eth.xcl
+build hal_exti.pbi : index hal_exti.xcl
+build hal_flash.pbi : index hal_flash.xcl
+build hal_fsmc.pbi : index hal_fsmc.xcl
+build hal_gpio.pbi : index hal_gpio.xcl
+build hal_i2c.pbi : index hal_i2c.xcl
+build hal_iwdg.pbi : index hal_iwdg.xcl
+build hal_misc.pbi : index hal_misc.xcl
+build hal_pwr.pbi : index hal_pwr.xcl
+build hal_rcc.pbi : index hal_rcc.xcl
+build hal_rtc.pbi : index hal_rtc.xcl
+build hal_sdio.pbi : index hal_sdio.xcl
+build hal_spi.pbi : index hal_spi.xcl
+build hal_tim.pbi : index hal_tim.xcl
+build hal_uart.pbi : index hal_uart.xcl
+build hal_uid.pbi : index hal_uid.xcl
+build hal_ver.pbi : index hal_ver.xcl
+build hal_wwdg.pbi : index hal_wwdg.xcl
+build system_mm32f327x.pbi : index system_mm32f327x.xcl
+build main.pbi : index main.xcl
+build LQ_F3277_Lib_part0.pbi : link Algorithm.pbi LQ_GPS_BD.pbi LQ_ICM20689.pbi LQ_demo_DMP.pbi LQ_I2C_MPU6050.pbi LQ_I2C_MPU9250.pbi LQ_AnoScope.pbi LQ_CAMERA.pbi
+build LQ_F3277_Lib_part1.pbi : link LQ_GPIO_EXIT.pbi LQ_GPIO_KEY.pbi LQ_GPIO_LED.pbi LQ_ImageProcess.pbi LQ_Inductor.pbi LQ_MotorServo.pbi LQ_MT9V034.pbi LQ_OLED096.pbi
+build LQ_F3277_Lib_part2.pbi : link LQ_PID.pbi LQ_TFT18.pbi LQ_ADC.pbi LQ_DMA.pbi LQ_Encoder.pbi LQ_FLASH.pbi LQ_GPIO.pbi LQ_I2C.pbi
+build LQ_F3277_Lib_part3.pbi : link LQ_PWM.pbi LQ_SOFTI2C.pbi LQ_SOFTSPI.pbi LQ_SPI.pbi LQ_SYS.pbi LQ_TIMER.pbi LQ_UART.pbi hal_adc.pbi
+build LQ_F3277_Lib_part4.pbi : link hal_bkp.pbi hal_can.pbi hal_comp.pbi hal_crc.pbi hal_crs.pbi hal_dac.pbi hal_dbg.pbi hal_dma.pbi
+build LQ_F3277_Lib_part5.pbi : link hal_eth.pbi hal_exti.pbi hal_flash.pbi hal_fsmc.pbi hal_gpio.pbi hal_i2c.pbi hal_iwdg.pbi hal_misc.pbi
+build LQ_F3277_Lib_part6.pbi : link hal_pwr.pbi hal_rcc.pbi hal_rtc.pbi hal_sdio.pbi hal_spi.pbi hal_tim.pbi hal_uart.pbi hal_uid.pbi
+build LQ_F3277_Lib_part7.pbi : link hal_ver.pbi hal_wwdg.pbi system_mm32f327x.pbi main.pbi
+build LQ_F3277_Lib.pbd : link LQ_F3277_Lib_part0.pbi LQ_F3277_Lib_part1.pbi LQ_F3277_Lib_part2.pbi LQ_F3277_Lib_part3.pbi LQ_F3277_Lib_part4.pbi LQ_F3277_Lib_part5.pbi LQ_F3277_Lib_part6.pbi LQ_F3277_Lib_part7.pbi
+build LQ_F3277_Lib.pbw : browsedata LQ_F3277_Lib.pbd
+
+
